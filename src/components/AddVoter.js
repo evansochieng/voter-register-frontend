@@ -1,5 +1,6 @@
 import React from 'react';
 import WardSelection from './WardSelection';
+import form from '../form.css';
 
 const AddVoter = () => {
 
