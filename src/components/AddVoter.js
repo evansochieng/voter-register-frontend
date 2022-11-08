@@ -1,11 +1,10 @@
 import React from 'react';
 import WardSelection from './WardSelection';
 import form from '../form.css';
-
 const AddVoter = () => {
 
     return(
-        <div>
+        <div className = "form-box">
             <form>
                 <div>
                     <label>first name</label><br />
