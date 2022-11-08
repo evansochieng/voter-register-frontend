@@ -11,6 +11,8 @@ const PollingStationsList = ({stationData}) => {
         .then(d => setVotersList(d))
     },[])
 
+    console.log(votersList)
+
     const filterByPollingStn = votersList.filter(item => item.polling_station_id === target)
 
     const voterInPollingStn = filterByPollingStn.map((voter, index)=>{
@@ -32,20 +34,20 @@ const PollingStationsList = ({stationData}) => {
 
     const stationList = stationData.map((stn)=> {
         return(
-            <>
-            <SearchBar votersList={votersList} stationData={stationData} />
             <div key={stn.id}>
                 <button onFocus={handleVoters} value={stn.id}>{stn.name}</button>
                 <button>voters-count</button>
                 {voterInPollingStn}
-            </div>
-            </>
-            
+            </div>    
         )
     })
 
     return(
-        <div>{stationList}</div>
+        <>
+            <SearchBar votersList={votersList} stationData={stationData} />
+            <div>{stationList}</div>
+        </>
+        
     )
 }
 
