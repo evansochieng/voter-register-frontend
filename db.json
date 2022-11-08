@@ -19,79 +19,45 @@
   ],
   "voters": [
     {
-      "id": 1,
-      "first_name": "",
-      "middle_name": "",
-      "last_name": "",
-      "id_number": "",
-      "age": "",
-      "DOB": "",
-      "gender": "",
-      "polling_station_id": ""
-    },
-    {
       "first_name": "George",
-      "middle_name": "Mwangi",
-      "last_name": "Njogu",
-      "polling_station_id": "",
-      "gender": "",
-      "age": "27",
-      "DOB": "2022-11-02",
-      "id_number": "33176113",
-      "id": 2
-    },
-    {
-      "first_name": "",
-      "middle_name": "",
-      "last_name": "",
-      "polling_station_id": "",
-      "gender": "",
-      "age": "",
-      "DOB": "",
-      "id_number": "",
-      "id": 3
-    },
-    {
-      "first_name": "Elye",
       "middle_name": "Njogu",
       "last_name": "Otieno",
-      "polling_station_id": "",
+      "polling_station_id": "2",
       "gender": "male",
-      "age": "19",
-      "DOB": "2022-11-18",
-      "id_number": "40442334",
-      "station": "Pollong Station B",
-      "id": 4
+      "age": "27",
+      "DOB": "2022-11-03",
+      "id_number": "33176113",
+      "id": 1
     }
   ],
   "polling_stations": [
     {
-      "id": "",
+      "id": 1,
       "name": "Pollong Station A",
       "ward_id": ""
     },
     {
-      "id": 1,
+      "id": 2,
       "name": "Pollong Station B",
       "ward_id": ""
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Pollong Station C",
       "ward_id": ""
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Pollong Station D",
       "ward_id": ""
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Pollong Station E",
       "ward_id": ""
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Pollong Station F",
       "ward_id": ""
     }

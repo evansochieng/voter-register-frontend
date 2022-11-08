@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch} from "react-router-dom";
 import AddVoter from "./pages/AddVoter";
 import PollingStations from './pages/PollingStationList'
 import NavBar from "./pages/NavBar";
+import PollingStationsList from "./pages/PollingStationList";
+import Home from "./pages/Home";
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
         .then(d => setStationData(d))
     },[])
 
+
   return(
     <>
       <BrowserRouter>
@@ -24,8 +27,11 @@ function App() {
             <Route path='/registration'>
               <AddVoter stationData={stationData} />
             </Route>
+            <Route path="/voters">
+              <PollingStationsList stationData={stationData} />
+            </Route>
             <Route exact path="/">
-              <PollingStations stationData={stationData} />
+              <Home stationData={stationData} />
             </Route>
           </Switch>
       </BrowserRouter>

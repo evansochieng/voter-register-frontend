@@ -1,0 +1,31 @@
+.form-box{
+    background-color: aquamarine;
+    position: relative;
+    text-align: center;
+width: 400px;
+margin-left: 450px;
+margin-top: 70px;
+height:550px;
+border-radius: 5px;
+}
+.form-box label{
+    text-align: center;
+
+}
+.form-box label{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    /* margin: 0 0 2vh 0; */
+    margin-top: 5px;
+    height: auto;
+    border-radius: 5px;
+}
+.form-box input, textarea{
+    width: fit-content;
+    border-radius: 5px;
+   height: 30px;
+}
+#inputgi:hover{
+    color:black;
+}
