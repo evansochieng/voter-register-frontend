@@ -1,7 +1,7 @@
 import React from 'react';
-import WardSelection from './WardSelection';
-import form from '../form.css';
-const AddVoter = () => {
+import WardSelection from '../components/WardSelection';
+
+const AddVoter = ({ wardData }) => {
 
     return(
         <div className = "form-box">
@@ -33,7 +33,7 @@ const AddVoter = () => {
                         <option value="female" name="">Female</option>
                     </select>                       
                 </div>
-                <WardSelection />
+                <WardSelection wardData={wardData}/>
             </form>
         </div>
     )
