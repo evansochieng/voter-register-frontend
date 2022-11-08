@@ -1,7 +1,7 @@
 import React from 'react';
-import WardSelection from '../components/WardSelection';
+import StationSelection from '../components/StationSelection';
 
-const AddVoter = ({ wardData }) => {
+const AddVoter = ({ stationData }) => {
 
     return(
         <div>
@@ -33,7 +33,7 @@ const AddVoter = ({ wardData }) => {
                         <option value="female" name="">Female</option>
                     </select>                       
                 </div>
-                <WardSelection wardData={wardData}/>
+                <StationSelection stationData={stationData}/>
             </form>
         </div>
     )
