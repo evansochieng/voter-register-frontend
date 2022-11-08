@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import SearchBar from "../components/SearchBar";
 
 const PollingStationsList = ({stationData}) => {
     const [target, setTarget] = useState("")
@@ -9,8 +10,6 @@ const PollingStationsList = ({stationData}) => {
         .then(r => r.json())
         .then(d => setVotersList(d))
     },[])
-
-    console.log(votersList)
 
     const filterByPollingStn = votersList.filter(item => item.polling_station_id === target)
 
@@ -33,11 +32,15 @@ const PollingStationsList = ({stationData}) => {
 
     const stationList = stationData.map((stn)=> {
         return(
+            <>
+            <SearchBar votersList={votersList} stationData={stationData} />
             <div key={stn.id}>
                 <button onFocus={handleVoters} value={stn.id}>{stn.name}</button>
                 <button>voters-count</button>
                 {voterInPollingStn}
             </div>
+            </>
+            
         )
     })
 
