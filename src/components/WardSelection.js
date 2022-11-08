@@ -1,17 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 
-const WardSelection = () =>{
-    const [userInput, setUserInput] = useState("")
+const WardSelection = ({ wardData }) =>{
     
-    useEffect(()=>{
-        fetch("http://localhost:9292/wards")
-        .then(r => r.json())
-        .then(d => setUserInput(d))
-    },[])
-
-    console.log(userInput)
-    const wards = userInput.map((ward) => {
+    const wards = wardData.map((ward) => {
         return(
             <option value={ward.name} key={ward.name}>{console.log(ward.name)}{ward.name}</option>
         )
