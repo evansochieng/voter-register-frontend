@@ -14,8 +14,6 @@ function App() {
         .then(d => setStationData(d))
     },[])
 
-    console.log(stationData)
-
   return(
     <>
       <BrowserRouter>
