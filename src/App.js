@@ -1,22 +1,37 @@
 import React,{ useState, useEffect} from "react";
+import { BrowserRouter, Route, Switch} from "react-router-dom";
 import AddVoter from "./pages/AddVoter";
+import PollingStations from './pages/PollingStationList'
+import NavBar from "./pages/NavBar";
 
 
 function App() {
-  const [wardData, setWardData] = useState([])
+  const [stationData, setStationData] = useState([])
     
     useEffect(()=>{
-        fetch("http://localhost:9292/wards")
+        fetch("http://localhost:3000/polling_stations")
         .then(r => r.json())
-        .then(d => setWardData(d))
+        .then(d => setStationData(d))
     },[])
 
-    console.log(wardData)
+    console.log(stationData)
 
   return(
-    <div>
-        <AddVoter wardData={wardData}/>
-    </div>
+    <>
+      <BrowserRouter>
+        <Route>
+            <NavBar path='/' />
+        </Route>
+          <Switch>
+            <Route path='/registration'>
+              <AddVoter stationData={stationData} />
+            </Route>
+            <Route exact path="/">
+              <PollingStations stationData={stationData} />
+            </Route>
+          </Switch>
+      </BrowserRouter>
+    </>
   )
 }
 
