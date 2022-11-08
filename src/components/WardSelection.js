@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 
 const WardSelection = () =>{
-    const [userInput, setUserInput] = useState("")
+    const [userInput, setUserInput] = useState([])
     
     useEffect(()=>{
         fetch("http://localhost:9292/wards")
@@ -11,17 +11,18 @@ const WardSelection = () =>{
     },[])
 
     console.log(userInput)
-    const wards = userInput.map((ward) => {
-        return(
-            <option value={ward.name} key={ward.name}>{console.log(ward.name)}{ward.name}</option>
-        )
-    })
+    // const wards = userInput.map((ward) => {
+    //     return(
+    //         <option value={ward.name}>{ward.name}</option>
+    //         // <option value={ward.name} key={ward.name}>{console.log(ward.name)}{ward.name}</option>
+    //     )
+    // })
 
     return (
         <div>
             <label>Ward</label><br />
             <select name="ward">
-                {wards}
+                {/* {wards} */}
             </select>
         </div>
     )
