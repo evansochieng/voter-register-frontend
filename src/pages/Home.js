@@ -3,6 +3,8 @@ import home from '../home.css';
 
 const Home = ({stationData}) => {
 
+    // fetch("").then(r => r.json()).then(d => d)
+
     const stationList = stationData.map((stn)=> {
         return(
             <div className='pollcount' key={stn.id}>
