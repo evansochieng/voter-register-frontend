@@ -2,6 +2,8 @@ import React from "react";
 
 const Home = ({stationData}) => {
 
+    // fetch("").then(r => r.json()).then(d => d)
+
     const stationList = stationData.map((stn)=> {
         return(
             <div key={stn.id}>

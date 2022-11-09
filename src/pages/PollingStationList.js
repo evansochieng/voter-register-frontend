@@ -17,7 +17,7 @@ const PollingStationsList = ({stationData}) => {
 
     const voterInPollingStn = filterByPollingStn.map((voter, index)=>{
         return(
-            <div key={voter.id}>
+            <div key={voter.id} style={{padding:"10px", border:"solid", borderRadius:"8px", color:"white", background:"grey"}}>
                 <p>{index + 1}. {voter.first_name} {voter.middle_name} {voter.last_name}</p>
             </div>
         )
@@ -27,26 +27,52 @@ const PollingStationsList = ({stationData}) => {
         setTarget(e.target.value)
     } 
 
-    // const handleDelete = () => {
-    //     setTarget(null)
-    //   }
+    const handleDelete = () => {
+        setTarget(null)
+      }
 
 
     const stationList = stationData.map((stn)=> {
         return(
-            <div key={stn.id}>
-                <button onFocus={handleVoters} value={stn.id}>{stn.name}</button>
-                <button>voters-count</button>
+            <div key={stn.id}  style={{textAlign:"center", justifyContent:"center"}}>
+                <button onFocus={handleVoters} value={stn.id}
+                    style={{
+                    fontSize:"15px",
+                    background:"gray",
+                    color:"white",
+                    padding:"15px",
+                    cursor:"pointer",
+                    margin:"2px",
+                    width:"300px", 
+                    border:"none"    
+                      }} 
+                      onMouseOver={(e)=> e.target.style.background = "#D3D3D3"} 
+                      onMouseOut={(e)=> e.target.style.background = "gray" } 
+                      >{stn.name}</button>
+                      <button
+                            style={{
+                            fontSize:"15px",
+                            background:"gray",
+                            color:"white",
+                            padding:"15px",
+                            cursor:"pointer",
+                            margin:"2px",
+                            border:"none" 
+                            }} 
+                    onMouseOver={(e)=> e.target.style.background = "#D3D3D3"} 
+                    onMouseOut={(e)=> e.target.style.background = "gray" } 
+                    onClick={handleDelete}
+                    >x</button>
                 {voterInPollingStn}
             </div>    
         )
     })
 
     return(
-        <>
+        <section  style={{display:"flex", flexDirection:"column", background:"pink"}}>
             <SearchBar votersList={votersList} stationData={stationData} />
-            <div>{stationList}</div>
-        </>
+            {stationList}
+        </section>
         
     )
 }

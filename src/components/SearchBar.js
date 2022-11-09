@@ -15,7 +15,7 @@ const SearchBar = ({votersList, stationData}) =>{
     const voter = searchFilter.map(voter => {
 
         return(
-            <div key={voter.id}>
+            <div key={voter.id} style={{padding:"2px", border:"solid", borderRadius:"8px", color:"white", background:"grey"}}>
                 <h2>Name : {voter.first_name} {voter.middle_name} {voter.last_name}</h2>
                 <h4>Date Of Birth : {voter.DOB}</h4>
                 <h4>ID Number : {voter.id_number}</h4>
@@ -29,8 +29,8 @@ const SearchBar = ({votersList, stationData}) =>{
       }
 
     return(
-        <div>
-            <input type="search" placeholder="search by id..." onChange={handleSearch}></input>
+        <div style={{padding:"15px", textAlign:"center", background:"gold"}}>
+            <input type="search" placeholder="search by id..." onChange={handleSearch} style={{fontSize:"25px", border:"none", borderRadius:"12px"}} ></input>
             {voter}
         </div>
     )
