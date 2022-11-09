@@ -19,17 +19,6 @@
   ],
   "voters": [
     {
-      "first_name": "George",
-      "middle_name": "Njogu",
-      "last_name": "Otieno",
-      "polling_station_id": "2",
-      "gender": "male",
-      "age": "27",
-      "DOB": "2022-11-03",
-      "id_number": "33176113",
-      "id": 1
-    },
-    {
       "first_name": "Elye",
       "middle_name": "Kioko",
       "last_name": "Muia",

@@ -15,11 +15,16 @@ const PollingStationsList = ({stationData}) => {
 
     const filterByPollingStn = votersList.filter(item => item.polling_station_id === target)
 
+    const deleteVoter = (id) =>{
+        const newVotersList = votersList.filter(voter => voter.id !== id)
+        setVotersList(newVotersList)
+    }
+
     const voterInPollingStn = filterByPollingStn.map((voter, index)=>{
         return(
-            <div key={voter.id} style={{padding:"10px", border:"solid", borderRadius:"8px", color:"white", background:"grey", opacity:"90%"}}>
+            <section key={voter.id} style={{padding:"10px", border:"solid", borderRadius:"8px", color:"white", margin:"5px", background:"grey", opacity:"90%"}}>
                 <p>{index + 1}. {voter.first_name} {voter.middle_name} {voter.last_name}</p>
-            </div>
+            </section>
         )
     })
 
@@ -70,7 +75,7 @@ const PollingStationsList = ({stationData}) => {
 
     return(
         <section  style={{display:"flex", flexDirection:"column", background:"purple"}}>
-            <SearchBar votersList={votersList} stationData={stationData} />
+            <SearchBar votersList={votersList} stationData={stationData} deleteVoter={deleteVoter}/>
             {stationList}
         </section>
         

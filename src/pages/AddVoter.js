@@ -44,7 +44,7 @@ const AddVoter = ({ stationData }) => {
                
         }
     return(
-        <div>
+        <div className='form-box'>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>first name</label><br />
