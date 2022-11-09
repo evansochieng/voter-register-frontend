@@ -1,7 +1,9 @@
 import React from "react";
-import home from '../home.css';
+import '../home.css';
 
 const Home = ({stationData}) => {
+
+    // fetch("").then(r => r.json()).then(d => d)
 
     const stationList = stationData.map((stn)=> {
         return(

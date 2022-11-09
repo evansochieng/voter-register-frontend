@@ -4,15 +4,16 @@ import AddVoter from "./pages/AddVoter";
 import NavBar from "./pages/NavBar";
 import PollingStationsList from "./pages/PollingStationList";
 import Home from "./pages/Home";
-import form from './form.css';
-import home from './home.css';
+import './form.css';
+import './home.css';
+import "./nav.css"
 
 
 function App() {
   const [stationData, setStationData] = useState([])
     
     useEffect(()=>{
-        fetch("http://localhost:3000/polling_stations")
+        fetch("http://localhost:9292/pollingstations")
         .then(r => r.json())
         .then(d => setStationData(d))
     },[])
