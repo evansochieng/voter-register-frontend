@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const StationSelection = ({ stationData, handleChange }) =>{
+const StationSelection = ({ stationData, handleChange, stnID }) =>{
 
     console.log(stationData)
     
@@ -15,7 +15,7 @@ const StationSelection = ({ stationData, handleChange }) =>{
     return (
         <div>
             <label>Polling Station</label><br />
-            <select name="polling_station_id" onChange={handleChange}>
+            <select name="polling_station_id" value={stnID} onChange={handleChange}>
                 {stations}
             </select>
         </div>

@@ -1,22 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../home.css';
 
-const Home = ({stationData}) => {
+const Home = () => {
 
-    // fetch("").then(r => r.json()).then(d => d)
+    //set state
+    const [voterCount, setVoterCount] = useState([]);
 
-    const stationList = stationData.map((stn)=> {
-        return(
-            <div className='pollcount' key={stn.id}>
-                <button className='poll' value={stn.id}>{stn.name}</button>
-                <button className='vote'>voters-count</button>
-            </div>
-        )
+    //fetch voter count summary from api
+    useEffect(() => {
+        fetch("http://localhost:9292/pollingstations/votercounts")
+        .then(resp => resp.json())
+        .then(data => setVoterCount(data))
+    }, [])
+
+    const stationList = voterCount.map((stn)=> {
+        return (
+          <tr className="pollcount" key={Object.keys(stn)}>
+            <td className="poll">{Object.keys(stn)}</td>
+            <td className="vote">{Object.values(stn)}</td>
+          </tr>
+        );
     })
 
-    return(
-        <div>{stationList}</div>
-    )
+    return (
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Polling Station</th>
+              <th>Number of Registered Voters</th>
+            </tr>
+          </thead>
+          <tbody>{stationList}</tbody>
+        </table>
+
+        <p style={{fontSize: "30px"}}>Jiandikishe turudishe bei ya unga chini!</p>
+      </div>
+    );
 
 }
 
