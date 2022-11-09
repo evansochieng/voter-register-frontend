@@ -1,7 +1,9 @@
 import React, {useState} from "react";
+import EditDetails from "./EditDetails";
 
 const SearchBar = ({votersList, stationData, deleteVoter}) =>{
-    const [search, setSearch] = useState("")
+    const [search, setSearch] = useState("");
+    const [voterInfo, setVoterInfo] = useState("");
 
 
     const searchFilter = votersList.filter(voter => {
@@ -12,8 +14,9 @@ const SearchBar = ({votersList, stationData, deleteVoter}) =>{
         }
     })
 
-    const handleEdit = (e) => {
-        console.log(e.target.value)
+    const handleEdit = () => {
+        setVoterInfo(searchFilter);
+        return <EditDetails voterInfo={voterInfo} stationData={stationData} />;
     }
 
     const handleDelete = (e) =>{

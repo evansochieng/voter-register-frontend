@@ -34,7 +34,7 @@ const Home = () => {
           <tbody>{stationList}</tbody>
         </table>
 
-        <p style={{fontSize: "30px"}}>Jiandikishe turudishe bei ya unga chini!</p>
+        <p style={{fontSize: "30px", textAlign: "center", justifyContent: "center"}}>Jiandikishe turudishe bei ya unga chini!</p>
       </div>
     );
 
