@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import StationSelection from '../components/StationSelection';
+import form from '../form.css';
 
 const AddVoter = ({ stationData }) => {
     const [record, setRecord] = useState({
@@ -44,7 +45,7 @@ const AddVoter = ({ stationData }) => {
                
         }
     return(
-        <div>
+        <div className='form-box'>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>first name</label><br />
@@ -78,9 +79,9 @@ const AddVoter = ({ stationData }) => {
                         <option value="female">Female</option>
                     </select>                       
                 </div>
-                <StationSelection stationData={stationData} handleChange={handleChange}/>
+                <StationSelection className = "poll" stationData={stationData} handleChange={handleChange}/>
                 <div>
-                    <button type="submit">Register</button>
+                    <button className = "regButton" type="submit">Register</button>
                 </div>
             </form>
         </div>

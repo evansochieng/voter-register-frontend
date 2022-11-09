@@ -4,6 +4,7 @@ import AddVoter from "./pages/AddVoter";
 import NavBar from "./pages/NavBar";
 import PollingStationsList from "./pages/PollingStationList";
 import Home from "./pages/Home";
+import form from './form.css';
 
 
 function App() {
