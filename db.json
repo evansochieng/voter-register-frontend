@@ -83,6 +83,17 @@
       "DOB": "",
       "id_number": "",
       "id": 6
+    },
+    {
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "polling_station_id": "",
+      "gender": "",
+      "age": "",
+      "DOB": "",
+      "id_number": "",
+      "id": 7
     }
   ],
   "polling_stations": [
