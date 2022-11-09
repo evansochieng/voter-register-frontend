@@ -23,13 +23,13 @@ const AddVoter = ({ stationData }) => {
 
         const handleSubmit = (e) => {
             e.preventDefault()
-            fetch("http://localhost:3000/voters", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(record)
-              });
+            fetch("http://localhost:9292/voters", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(record),
+            });
 
               setRecord({
                 first_name:"",
