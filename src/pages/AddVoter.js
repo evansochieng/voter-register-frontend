@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import StationSelection from '../components/StationSelection';
-import form from '../form.css';
+import '../form.css';
 
 const AddVoter = ({ stationData }) => {
     const [record, setRecord] = useState({
@@ -15,7 +15,6 @@ const AddVoter = ({ stationData }) => {
     })
 
     const handleChange = (e) => {
-        console.log(e.target.value)
         e.preventDefault()
         setRecord({
             ...record,
@@ -31,6 +30,7 @@ const AddVoter = ({ stationData }) => {
               },
               body: JSON.stringify(record),
             });
+
 
               setRecord({
                 first_name:"",
