@@ -9,7 +9,7 @@ const NavBar = () => {
             <ul>
 
             <li><NavLink to="/registration" >Registration</NavLink></li>
-            <li><NavLink to="/voters">Polling Staton</NavLink></li>
+            <li><NavLink to="/voters">Voters</NavLink></li>
             </ul>
        </nav>
     )

@@ -7,9 +7,6 @@ const PollingStationsList = ({stationData}) => {
 
     useEffect(()=>{
         fetch("http://localhost:9292/voters")
-        .then(r => r.json())
-        .then(d => setVotersList(d))
-        fetch("http://localhost:9292/voters")
           .then((r) => r.json())
           .then((d) => setVotersList(d));
     },[])
