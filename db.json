@@ -19,17 +19,6 @@
   ],
   "voters": [
     {
-      "first_name": "George",
-      "middle_name": "Njogu",
-      "last_name": "Otieno",
-      "polling_station_id": "2",
-      "gender": "male",
-      "age": "27",
-      "DOB": "2022-11-03",
-      "id_number": "33176113",
-      "id": 1
-    },
-    {
       "first_name": "Elye",
       "middle_name": "Kioko",
       "last_name": "Muia",
@@ -41,59 +30,15 @@
       "id": 2
     },
     {
-      "first_name": "",
-      "middle_name": "",
-      "last_name": "",
-      "polling_station_id": "",
+      "first_name": "Steve",
+      "middle_name": "Njogu",
+      "last_name": "Muia",
+      "polling_station_id": "5",
       "gender": "male",
-      "age": "",
-      "DOB": "",
-      "id_number": "",
-      "id": 3
-    },
-    {
-      "first_name": "",
-      "middle_name": "",
-      "last_name": "",
-      "polling_station_id": "",
-      "gender": "",
-      "age": "",
-      "DOB": "",
-      "id_number": "",
+      "age": "19",
+      "DOB": "2022-11-19",
+      "id_number": "25526790",
       "id": 4
-    },
-    {
-      "first_name": "",
-      "middle_name": "",
-      "last_name": "",
-      "polling_station_id": "",
-      "gender": "",
-      "age": "",
-      "DOB": "",
-      "id_number": "",
-      "id": 5
-    },
-    {
-      "first_name": "",
-      "middle_name": "",
-      "last_name": "",
-      "polling_station_id": "3",
-      "gender": "",
-      "age": "",
-      "DOB": "",
-      "id_number": "",
-      "id": 6
-    },
-    {
-      "first_name": "",
-      "middle_name": "",
-      "last_name": "",
-      "polling_station_id": "",
-      "gender": "",
-      "age": "",
-      "DOB": "",
-      "id_number": "",
-      "id": 7
     }
   ],
   "polling_stations": [
