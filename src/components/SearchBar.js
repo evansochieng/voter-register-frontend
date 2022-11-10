@@ -40,6 +40,8 @@ const SearchBar = ({votersList, stationData, deleteVoter}) =>{
               color: "white",
               background: "grey",
               margin: "5px",
+              maxWidth: "400px",
+              marginLeft: "700px"
             }}
           >
             <h2>
@@ -48,9 +50,9 @@ const SearchBar = ({votersList, stationData, deleteVoter}) =>{
             <h4>Date Of Birth : {voter.DOB}</h4>
             <h4>ID Number : {voter.id_number}</h4>
             <h4>Polling Station : {voter.polling_station_id}</h4>
-            <div>
-              <button onClick={handleEdit} value={voter.id}>Edit Details</button>
-              <button onClick={handleDelete} value={voter.id}>
+            <div >
+              <button style={{padding: "10px", marginRight: "10px"}} onClick={handleEdit} value={voter.id}>Edit Details</button>
+              <button style={{padding: "10px" }} onClick={handleDelete} value={voter.id}>
                 delete
               </button>
             </div>
@@ -63,7 +65,7 @@ const SearchBar = ({votersList, stationData, deleteVoter}) =>{
       }
 
     return(
-        <div style={{padding:"15px", textAlign:"center", background:"gold"}}>
+        <div style={{padding:"15px", textAlign:"center", background:""}}>
             <input type="search" placeholder="search by id..." onChange={handleSearch} style={{fontSize:"25px", border:"none", borderRadius:"12px"}} ></input>
             {voter}
         </div>
