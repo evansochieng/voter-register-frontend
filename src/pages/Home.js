@@ -12,7 +12,6 @@ const Home = () => {
         .then(resp => resp.json())
         .then(data => setVoterCount(data))
     }, [])
-    console.log(voterCount);
 
     const stationList = voterCount.map((stn)=> {
         return (

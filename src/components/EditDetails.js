@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import StationSelection from "./StationSelection";
 import "../home.css";
 
-const EditDetails = ({ stationData, voterInfo }) => {
+const EditDetails = ({ stationData,  voterInfo}) => {
     
   const [record, setRecord] = useState(voterInfo);
-  console.log(record);
 
   const { id_number } = record;
+  console.log(id_number);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -20,6 +21,10 @@ const EditDetails = ({ stationData, voterInfo }) => {
 
   //function to handle redirect
     const history = useHistory();
+
+    const redirectToVoters = () => {
+        history.push('/')
+    }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -117,9 +122,18 @@ const EditDetails = ({ stationData, voterInfo }) => {
           handleChange={handleChange}
         />
         <div>
-          <button className="regButton" onClick={history.push("/voters")} type="submit">
-            Update Details
+          <button
+            className="regButton"
+            type="submit"
+            style={{ margin: "40px" }}
+          >
+            Update
           </button>
+          <Link to="/">
+            <button className="regButton" style={{ margin: "40px" }}>
+              Home
+            </button>
+          </Link>
         </div>
       </form>
     </div>
@@ -127,3 +141,6 @@ const EditDetails = ({ stationData, voterInfo }) => {
 };
 
 export default EditDetails;
+
+// onClick={history.push("/voters")}
+// onClick = { redirectToVoters }; 

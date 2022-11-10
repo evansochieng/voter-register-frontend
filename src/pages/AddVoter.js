@@ -47,9 +47,9 @@ const AddVoter = ({ stationData }) => {
       
     return(
     
-        <div className='form-box'>
+        <div className='form-box' style={{textAlign: "center", justifyContent: "center"}}>
             <form onSubmit={handleSubmit}>
-                <div className='register'><h2>Register with us</h2></div>
+                <div className='register'><h2>Kura yako, haki yako!</h2></div>
                 <div>
                     <label>First Name</label><br />
                     <input type="text" placeholder="first name..." name="first_name" value={record.first_name} onChange={handleChange}></input>                          
