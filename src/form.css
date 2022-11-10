@@ -7,6 +7,7 @@ margin-left: 400px;
 margin-top: 1px;
 height:630px;
 border-radius: 5px;
+box-shadow: inset;
 
 }
 .form-box label{
@@ -21,11 +22,12 @@ border-radius: 5px;
     margin-top: 5px;
     height: auto;
     border-radius: 5px;
+    font-weight: bolder;
 }
 .form-box input, textarea{
     width: fit-content;
     border-radius: 5px;
-   height: 25px;
+   height: 30px;
 }
 #input:hover{
     color:black;

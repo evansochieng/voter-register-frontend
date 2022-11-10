@@ -49,7 +49,7 @@ const AddVoter = ({ stationData }) => {
     
         <div className='form-box'>
             <form onSubmit={handleSubmit}>
-                <div><h2>Registration</h2></div>
+                {/* <div><h2>Registration</h2></div> */}
                 <div className='part1'>
                 <div>
                    
