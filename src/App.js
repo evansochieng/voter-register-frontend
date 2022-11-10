@@ -5,6 +5,7 @@ import NavBar from "./pages/NavBar";
 import PollingStationsList from "./pages/PollingStationList";
 import Home from "./pages/Home";
 import EditDetails from "./components/EditDetails";
+import Voters from "./components/Voters";
 import { Link } from "react-router-dom";
 import './form.css';
 import './home.css';
@@ -16,6 +17,7 @@ function App() {
   const [votersList, setVotersList] = useState([]);
   const [search, setSearch] = useState("");
   const [voterInfo, setVoterInfo] = useState("");
+  const [target, setTarget] = useState("");
 
     //fetch all polling stations
     useEffect(()=>{
@@ -96,6 +98,11 @@ function App() {
       setSearch(e.target.value);
     };
 
+    //set value of target polling station
+    const handleVoters = (e) => {
+      setTarget(e.target.value);
+    };
+
 
   return (
     <>
@@ -113,10 +120,14 @@ function App() {
               stationData={stationData}
               voter={voter}
               handleSearch={handleSearch}
+              handleVoters={handleVoters}
             />
           </Route>
           <Route exact path="/edit">
             <EditDetails stationData={stationData} voterInfo={voterInfo}/>
+          </Route>
+          <Route exact path="/voterslist">
+            <Voters target={target}  votersList={votersList} stationData={stationData}/>
           </Route>
           <Route exact path="/">
             <Home stationData={stationData} />

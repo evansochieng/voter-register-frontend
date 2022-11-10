@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import StationSelection from "./StationSelection";
 import "../home.css";
@@ -19,13 +18,6 @@ const EditDetails = ({ stationData,  voterInfo}) => {
     });
   };
 
-  //function to handle redirect
-    const history = useHistory();
-
-    const redirectToVoters = () => {
-        history.push('/')
-    }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(`http://localhost:9292/voters/${id_number}`, {
@@ -39,6 +31,7 @@ const EditDetails = ({ stationData,  voterInfo}) => {
   };
   return (
     <div className="form-box">
+        <h3>Edit Details</h3>
       <form onSubmit={handleSubmit}>
         <div>
           <label>First Name</label>
