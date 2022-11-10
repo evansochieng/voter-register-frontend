@@ -2,10 +2,10 @@
     background-color: rgb(173, 236, 236);
     position: relative;
     text-align: center;
-width: 500px;
-margin-left: 400px;
-margin-top: 1px;
-height:630px;
+width: 600px;
+margin-left: 650px;
+margin-top: 50px;
+height:870px;
 border-radius: 5px;
 box-shadow: inset;
 
@@ -25,9 +25,9 @@ box-shadow: inset;
     font-weight: bolder;
 }
 .form-box input, textarea{
-    width: fit-content;
+    width: 350px;
     border-radius: 5px;
-   height: 30px;
+   height: 50px;
 }
 #input:hover{
     color:black;
@@ -55,4 +55,9 @@ box-shadow: inset;
 }
 .parta, .partb{
     display: inline-block;
+}
+.register {
+    padding-top: 10px;
+    font-style:italic;
+    font-size: x-large;
 }
