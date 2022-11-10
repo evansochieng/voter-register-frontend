@@ -13,7 +13,7 @@ function App() {
   const [stationData, setStationData] = useState([])
     
     useEffect(()=>{
-        fetch("http://localhost:9292/pollingstation")
+        fetch("http://localhost:9292/pollingstations")
         .then(r => r.json())
         .then(d => setStationData(d))
     },[])
