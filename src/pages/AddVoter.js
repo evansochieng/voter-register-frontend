@@ -68,7 +68,7 @@ const AddVoter = ({ stationData }) => {
                 </div>
                 <div>
                     <label>D.O.B</label><br />
-                    <input type="date" min="01/11/2004" name="DOB" value={record.DOB} onChange={handleChange}></input>                          
+                    <input type="date" max="2004-11-01" name="DOB" value={record.DOB} onChange={handleChange}></input>                          
                 </div>
                 <div>
                     <label>Age</label><br />
