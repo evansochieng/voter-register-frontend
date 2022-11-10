@@ -2,12 +2,15 @@
     background-color: rgb(173, 236, 236);
     position: relative;
     text-align: center;
-width: 600px;
-margin-left: 650px;
-margin-top: 50px;
+/* width: 600px; */
+max-width: 35vw;
+margin-left: 33vw;
+margin-top: 20px;
 height:870px;
 border-radius: 5px;
 box-shadow: inset;
+
+
 
 }
 .form-box label{
@@ -49,15 +52,28 @@ box-shadow: inset;
 }
 .poll{
     border-radius: 5px;
+    
+  
+    
 }
 .regButton:hover{
-    color: black;
+    background-color: rgb(180, 9, 169);
 }
 .parta, .partb{
     display: inline-block;
 }
 .register {
-    padding-top: 10px;
+    /* padding-top: 0.25px; */
     font-style:italic;
     font-size: x-large;
 }
+.gender {
+    height: 25px;
+    width: 150px;
+}
+/* .first {
+    margin-top: 50px;
+} */
+/* .station {
+    height: 100px;
+} */

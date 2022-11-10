@@ -52,7 +52,7 @@ const AddVoter = ({ stationData }) => {
                 <div className='register'><h2>Register with us</h2></div>
                 <div>
                     <label>First Name</label><br />
-                    <input type="text" placeholder="first name..." name="first_name" value={record.first_name} onChange={handleChange}></input>                          
+                    <input  className='first' type="text" placeholder="first name..." name="first_name" value={record.first_name} onChange={handleChange}></input>                          
                 </div>
                 <div>
                     <label>Middle Name</label><br />
@@ -68,7 +68,7 @@ const AddVoter = ({ stationData }) => {
                 </div>
                 <div>
                     <label>D.O.B</label><br />
-                    <input type="date" min="01/11/2004" name="DOB" value={record.DOB} onChange={handleChange}></input>                          
+                    <input type="date" max="2004-01-01" name="DOB" value={record.DOB} onChange={handleChange}></input>                          
                 </div>
                 <div>
                     <label>Age</label><br />
@@ -76,13 +76,15 @@ const AddVoter = ({ stationData }) => {
                 </div>
                 <div>
                     <label>Gender</label><br/>
-                    <select name="gender" value={record.gender} onChange={handleChange}>
+                    <select className='gender' name="gender" value={record.gender} onChange={handleChange}>
                         <option>-select-</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>                       
                 </div>
-                <StationSelection className = "poll" stnID={record.polling_station_id} stationData={stationData} handleChange={handleChange}/>
+               <div className='station'>
+                <StationSelection  stnID={record.polling_station_id} stationData={stationData} handleChange={handleChange}/>
+                </div>
                 <div>
                     <button className = "regButton" type="submit">Register</button>
                 </div>
