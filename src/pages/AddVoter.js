@@ -50,6 +50,7 @@ const AddVoter = ({ stationData }) => {
         <div className='form-box'>
             <form onSubmit={handleSubmit}>
                 <div><h2>Registration</h2></div>
+                <div className='part1'>
                 <div>
                    
                     <label>First name</label><br />
@@ -67,6 +68,8 @@ const AddVoter = ({ stationData }) => {
                     <label>ID Number</label><br />
                     <input type="text" placeholder="Enter ID..." name="id_number" onChange={handleChange}></input>                          
                 </div>
+                </div>
+                <div className='partb'>
                 <div>
                     <label>D.O.B</label><br />
                     <input type="date" min="01/11/2004" name="DOB" onChange={handleChange}></input>                          
@@ -84,6 +87,7 @@ const AddVoter = ({ stationData }) => {
                     </select>                       
                 </div>
                 <StationSelection className = "poll" stationData={stationData} handleChange={handleChange}/>
+                </div>
                 <div>
                     <button className = "regButton" type="submit">Register</button>
                 </div>
