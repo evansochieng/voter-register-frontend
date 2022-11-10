@@ -12,29 +12,31 @@ const Home = () => {
         .then(resp => resp.json())
         .then(data => setVoterCount(data))
     }, [])
+    console.log(voterCount);
 
     const stationList = voterCount.map((stn)=> {
         return (
-          <tr className="pollcount" key={Object.keys(stn)}>
+          <tr key={Object.keys(stn)}>
             <td className="poll">{Object.keys(stn)}</td>
             <td className="vote">{Object.values(stn)}</td>
           </tr>
+
         );
     })
 
     return (
       <div>
-        <table>
+        <table className="pollcount">
           <thead>
-            <tr>
+            <tr className="heading">
               <th>Polling Station</th>
-              <th>Number of Registered Voters</th>
+              <th>No. of Registered Voters</th>
             </tr>
           </thead>
           <tbody>{stationList}</tbody>
         </table>
 
-        <p style={{fontSize: "30px", textAlign: "center", justifyContent: "center"}}>Jiandikishe turudishe bei ya unga chini!</p>
+        <p style={{marginTop: "90px",color: "white",fontSize: "50px", fontWeight: "bolder", fontFamily: "sans-serif", textAlign: "center", justifyContent: "center"}}>Jiandikishe turudishe bei ya unga chini!</p>
       </div>
     );
 

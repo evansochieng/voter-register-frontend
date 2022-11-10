@@ -49,7 +49,7 @@ const AddVoter = ({ stationData }) => {
     
         <div className='form-box'>
             <form onSubmit={handleSubmit}>
-                {/* <div><h2>Registration</h2></div> */}
+                <div className='register'><h2>Register with us</h2></div>
                 <div>
                     <label>First Name</label><br />
                     <input type="text" placeholder="first name..." name="first_name" value={record.first_name} onChange={handleChange}></input>                          
