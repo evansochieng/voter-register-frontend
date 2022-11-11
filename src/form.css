@@ -6,7 +6,7 @@
 max-width: 35vw;
 margin-left: 33vw;
 margin-top: 20px;
-height:870px;
+height:1050px;
 border-radius: 5px;
 box-shadow: inset;
 
@@ -26,6 +26,7 @@ box-shadow: inset;
     height: auto;
     border-radius: 5px;
     font-weight: bolder;
+
 }
 .form-box input, textarea{
     width: 350px;
@@ -73,7 +74,7 @@ box-shadow: inset;
 }
 /* .first {
     margin-top: 50px;
-} */
-/* .station {
+} 
+.station {
     height: 100px;
-} */
+}  */

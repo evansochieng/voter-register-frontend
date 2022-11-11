@@ -49,7 +49,7 @@ const AddVoter = ({ stationData }) => {
     
         <div className='form-box' style={{textAlign: "center", justifyContent: "center"}}>
             <form onSubmit={handleSubmit}>
-                <div className='register'><h2>Kura yako, haki yako!</h2></div>
+                {/* <div className='register'><h2>Kura yako, haki yako!</h2></div> */}
                 <div>
                     <label>First Name</label><br />
                     <input  className='first' type="text" placeholder="first name..." name="first_name" value={record.first_name} onChange={handleChange}></input>                          
@@ -70,10 +70,10 @@ const AddVoter = ({ stationData }) => {
                     <label>D.O.B</label><br />
                     <input type="date" max="2004-01-01" name="DOB" value={record.DOB} onChange={handleChange}></input>                          
                 </div>
-                <div>
+                {/* <div>
                     <label>Age</label><br />
                     <input type="text" placeholder='Add age...' name="age" value={record.age} onChange={handleChange}></input>                          
-                </div>
+                </div> */}
                 <div>
                     <label>Gender</label><br/>
                     <select className='gender' name="gender" value={record.gender} onChange={handleChange}>
@@ -84,10 +84,9 @@ const AddVoter = ({ stationData }) => {
                 </div>
                <div className='station'>
                 <StationSelection  stnID={record.polling_station_id} stationData={stationData} handleChange={handleChange}/>
+                <button style= {{margin: "20px"}}className = "regButton" type="submit"onClick={()=>alert("Registration successful")}>Register</button>
                 </div>
-                <div>
-                    <button className = "regButton" type="submit">Register</button>
-                </div>
+                    
             </form>
         </div>
     )

@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "../components/SearchBar";
 import { Link } from "react-router-dom";
 
-const PollingStationsList = ({stationData, handleVoters, votersList, deleteVoter}) => {
+const PollingStationsList = ({stationData, handleVoters, voter, handleSearch, votersList, deleteVoter}) => {
     // const [target, setTarget] = useState("")
 
     // const filterByPollingStn = votersList.filter(voter => voter.polling_station_id === target)
@@ -93,8 +93,8 @@ const PollingStationsList = ({stationData, handleVoters, votersList, deleteVoter
     })
 
     return(
-        <section  style={{display:"flex", flexDirection:"column", background:"purple"}}>
-            <SearchBar votersList={votersList} stationData={stationData} deleteVoter={deleteVoter}/>
+        <section  >
+            <SearchBar handleSearch={handleSearch} voter={voter} />
             {stationList}
         </section>
         
