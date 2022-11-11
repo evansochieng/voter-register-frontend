@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import StationSelection from "./StationSelection";
 import "../home.css";
 
-const EditDetails = ({ stationData, voterInfo }) => {
-    const {id} = voterInfo;
-    console.log(voterInfo);
+const EditDetails = ({ stationData,  voterInfo}) => {
+    
   const [record, setRecord] = useState(voterInfo);
+
+  const { id_number } = record;
+  console.log(id_number);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -17,7 +20,7 @@ const EditDetails = ({ stationData, voterInfo }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:9292/voters/${id}`, {
+    fetch(`http://localhost:9292/voters/${id_number}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -28,6 +31,7 @@ const EditDetails = ({ stationData, voterInfo }) => {
   };
   return (
     <div className="form-box">
+        <h3>Edit Details</h3>
       <form onSubmit={handleSubmit}>
         <div>
           <label>First Name</label>
@@ -111,9 +115,18 @@ const EditDetails = ({ stationData, voterInfo }) => {
           handleChange={handleChange}
         />
         <div>
-          <button className="regButton" type="submit">
-            Update Details
+          <button
+            className="regButton"
+            type="submit"
+            style={{ margin: "40px" }}
+          >
+            Update
           </button>
+          <Link to="/">
+            <button className="regButton" style={{ margin: "40px" }}>
+              Home
+            </button>
+          </Link>
         </div>
       </form>
     </div>
@@ -121,3 +134,6 @@ const EditDetails = ({ stationData, voterInfo }) => {
 };
 
 export default EditDetails;
+
+// onClick={history.push("/voters")}
+// onClick = { redirectToVoters }; 

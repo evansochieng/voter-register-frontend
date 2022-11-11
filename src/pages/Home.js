@@ -12,31 +12,50 @@ const Home = () => {
         .then(resp => resp.json())
         .then(data => setVoterCount(data))
     }, [])
-    console.log(voterCount);
 
     const stationList = voterCount.map((stn)=> {
         return (
           <tr key={Object.keys(stn)}>
-            <td className="poll">{Object.keys(stn)}</td>
-            <td className="vote">{Object.values(stn)}</td>
+            {/* <td className="poll">{Object.keys(stn)}</td>
+            <td className="vote">{Object.values(stn)}</td> */}
+            <td style={{ color: "white", fontWeight: "bold" }}>
+              {Object.keys(stn)}
+            </td>
+            <td style={{ color: "white", fontWeight: "bold" }}>
+              {Object.values(stn)}
+            </td>
           </tr>
-
         );
     })
 
     return (
-      <div>
-        <table className="pollcount">
-          <thead>
+      <div style={{ margin: "10px" }}>
+        <table
+          //   className="pollcount"
+          className="table"
+        >
+          <thead className="thead-dark">
             <tr className="heading">
               <th>Polling Station</th>
-              <th>No. of Registered Voters</th>
+              <th>Registered Voters</th>
             </tr>
           </thead>
           <tbody>{stationList}</tbody>
         </table>
 
-        <p style={{marginTop: "90px",color: "white",fontSize: "50px", fontWeight: "bolder", fontFamily: "sans-serif", textAlign: "center", justifyContent: "center"}}>Jiandikishe turudishe bei ya unga chini!</p>
+        <p
+          style={{
+            marginTop: "90px",
+            color: "white",
+            fontSize: "50px",
+            fontWeight: "bolder",
+            fontFamily: "sans-serif",
+            textAlign: "center",
+            justifyContent: "center",
+          }}
+        >
+          Jiandikishe turudishe bei ya unga chini!
+        </p>
       </div>
     );
 
