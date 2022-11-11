@@ -82,7 +82,7 @@ const EditDetails = ({ stationData,  voterInfo}) => {
           <br />
           <input
             type="date"
-            min="01/11/2004"
+            max="2004-01-01"
             name="DOB"
             value={record.DOB}
             onChange={handleChange}

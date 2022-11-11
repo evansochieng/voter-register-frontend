@@ -94,7 +94,7 @@ const PollingStationsList = ({stationData, handleVoters, voter, handleSearch}) =
 
     return(
         <section  style={{display:"flex", flexDirection:"column", background:"purple"}}>
-            <SearchBar voter={voter} handleSearch={handleSearch}/>
+            <SearchBar votersList={votersList} stationData={stationData} deleteVoter={deleteVoter}/>
             {stationList}
         </section>
         
