@@ -81,13 +81,15 @@ function App() {
           <h4>Polling Station : {voter.polling_station_id}</h4>
           <div>
             <Link to="/edit">
-              <button onClick={() => setVoterInfo(voter)} value={voter.id}>
+              <button className="regButton" onClick={() => setVoterInfo(voter)} value={voter.id}>
                 Edit Details
               </button>
             </Link>
-            <button onClick={handleDelete} value={voter.id}>
+            <Link to= "/">
+            <button className="regButton" onClick={handleDelete} value={voter.id}>
               delete
             </button>
+            </Link>
           </div>
         </div>
       );
@@ -96,6 +98,7 @@ function App() {
     //sets value of search term
     const handleSearch = (e) => {
       setSearch(e.target.value);
+      console.log(e.target.value)
     };
 
     //set value of target polling station

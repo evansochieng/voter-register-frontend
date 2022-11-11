@@ -27,6 +27,7 @@ const EditDetails = ({ stationData,  voterInfo}) => {
       },
       body: JSON.stringify(record),
     });
+    console.log(record);
 
   };
   return (
@@ -88,7 +89,7 @@ const EditDetails = ({ stationData,  voterInfo}) => {
             onChange={handleChange}
           ></input>
         </div>
-        <div>
+        {/* <div>
           <label>Age</label>
           <br />
           <input
@@ -98,7 +99,7 @@ const EditDetails = ({ stationData,  voterInfo}) => {
             value={record.age}
             onChange={handleChange}
           ></input>
-        </div>
+        </div> */}
         <div>
           <label>Gender</label>
           <br />
@@ -119,6 +120,7 @@ const EditDetails = ({ stationData,  voterInfo}) => {
             className="regButton"
             type="submit"
             style={{ margin: "40px" }}
+            onClick={()=>alert("update successful")}
           >
             Update
           </button>
