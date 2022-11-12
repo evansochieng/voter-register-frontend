@@ -1,6 +1,6 @@
 # Voter registration platform
 
-## Project members
+### Project members
 Evans Ochieng :(Scrum Master)Backend Developer(DB Config, Active Records Migrations)
 George Njogu :Frontend Developer (ReactJS User Interface s)
 Charity Nelima :Frontend Developer (UX/UI Designer)
