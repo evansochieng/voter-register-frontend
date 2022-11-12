@@ -1,9 +1,10 @@
 body{
-    background-image: url(./images/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg);
+    /* background-image: url(./images/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg); */
+    background-color: #66cc00;
 }
 .pollcount{
     justify-content: center;
-     margin-left: 650px;
+     margin-left: 33vw;
     margin-top: 40px;
     display: inline-block; 
     
@@ -46,3 +47,6 @@ body{
     font-size: x-large;
     color: rgb(248, 247, 252);
 }
+/* .gender {
+    font-size: 0px;
+} */

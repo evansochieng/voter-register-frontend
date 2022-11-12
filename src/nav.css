@@ -6,7 +6,9 @@ body {
     margin: 0;
 }
 .nav {
-    background-color: #333;
+    /* background-color: #333; */
+    /* background-color: #264d00; */
+    background-color: #556b02;
     color: white;
     display: flex;
     justify-content: space-between;

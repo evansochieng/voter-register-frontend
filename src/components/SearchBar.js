@@ -60,12 +60,24 @@ const SearchBar = ({voter, handleSearch}) =>{
     //     setSearch(e.target.value)
     //   }
 
-    return(
-        <div style={{padding:"15px", textAlign:"center", background:"gold"}}>
-            <input type="search" placeholder="search by id..." onChange={handleSearch} style={{fontSize:"25px", border:"none", borderRadius:"12px"}} ></input>
-            {voter}
-        </div>
-    )
+    return (
+      <div
+        style={{
+          padding: "15px",
+          textAlign: "center",
+          background: "",
+          justifyContent: "center"
+        }}
+      >
+        <input
+          type="search"
+          placeholder="search by id..."
+          onChange={handleSearch}
+          style={{ fontSize: "25px", border: "none", borderRadius: "12px" }}
+        ></input>
+        {voter}
+      </div>
+    );
 }
 
 export default SearchBar;
