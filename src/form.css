@@ -3,12 +3,18 @@
     position: relative;
     text-align: center;
 width: 600px;
-margin-left: 650px;
+margin-left: 350px;
 margin-top: 50px;
 height:870px;
 border-radius: 5px;
 box-shadow: inset;
 
+}
+.gender{
+    width: 60px;
+    height: 275px;
+    justify-content: center;
+    margin-left: 300px;
 }
 .form-box label{
     text-align: center;
