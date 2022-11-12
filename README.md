@@ -1,10 +1,10 @@
 # Voter registration platform
 
 ### Project members
-#### Evans Ochieng :(Scrum Master)Backend Developer(DB Config, Active Records Migrations)
-#### George Njogu :Frontend Developer (ReactJS User Interface s)
-#### Charity Nelima :Frontend Developer (UX/UI Designer)
-#### Leslie Nyatigi :Frontend Developer (UI & UX Designer & API Endpoints - Sinatra)
+a Evans Ochieng :(Scrum Master)Backend Developer(DB Config, Active Records Migrations)<br />
+b George Njogu :Frontend Developer (ReactJS User Interfaces)<br />
+c Charity Nelima :Frontend Developer (UX/UI Designer)<br />
+d Leslie Nyatigi :Frontend Developer (UI & UX Designer & API Endpoints - Sinatra)
 
 ### Technologies used
 CSS :For the frontend and responsiveness.
