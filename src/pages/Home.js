@@ -18,10 +18,10 @@ const Home = () => {
           <tr key={Object.keys(stn)}>
             {/* <td className="poll">{Object.keys(stn)}</td>
             <td className="vote">{Object.values(stn)}</td> */}
-            <td style={{ color: "white", fontWeight: "bold" }}>
+            <td style={{ color: "black", fontWeight: "bold" }}>
               {Object.keys(stn)}
             </td>
-            <td style={{ color: "white", fontWeight: "bold" }}>
+            <td style={{ color: "black", fontWeight: "bold" }}>
               {Object.values(stn)}
             </td>
           </tr>
@@ -33,6 +33,7 @@ const Home = () => {
         <table
           //   className="pollcount"
           className="table"
+          style={{backgroundColor: 'white'}}
         >
           <thead className="thead-dark">
             <tr className="heading">

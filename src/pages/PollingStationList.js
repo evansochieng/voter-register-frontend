@@ -38,16 +38,16 @@ const PollingStationsList = ({stationData, handleVoters, voter, handleSearch, vo
                   value={stn.id}
                   style={{
                     fontSize: "15px",
-                    background: "#0ABAB5",
-                    color: "white",
+                    background: "white",
+                    color: "black",
                     padding: "15px",
                     cursor: "pointer",
                     margin: "2px",
                     width: "300px",
                     border: "none",
                   }}
-                  onMouseOver={(e) => (e.target.style.background = "#00FFEF")}
-                  onMouseOut={(e) => (e.target.style.background = "#0ABAB5")}
+                  onMouseOver={(e) => (e.target.style.background = "#556b02")}
+                  onMouseOut={(e) => (e.target.style.background = "white")}
                 >
                   {stn.name}
                 </button>
@@ -93,10 +93,10 @@ const PollingStationsList = ({stationData, handleVoters, voter, handleSearch, vo
     })
 
     return(
-        <section  >
+        <div  style={{textAlign: 'center', justifyContent: 'center'}}>
             <SearchBar handleSearch={handleSearch} voter={voter} />
             {stationList}
-        </section>
+        </div>
         
     )
 }

@@ -18,9 +18,17 @@ function Voters({target, votersList, stationData}) {
     });
 
   return (
-    <div style={{textAlign: "center", justifyContent: "center"}}>
+    <div
+      style={{
+        textAlign: "center",
+        justifyContent: "center",
+        margin: "10px",
+        backgroundColor: "white",
+      }}
+    >
       {/* <h1>{stnName}</h1> */}
-      <table className="table table-borderless table-dark">
+      {/* className="table table-borderless table-dark" */}
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">Serial</th>

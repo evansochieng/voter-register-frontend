@@ -62,36 +62,47 @@ function App() {
     const voter = searchFilter.map((voter) => {
       //setVoterInfo(voter);
       return (
-        <div
-          key={voter.id}
-          style={{
-            padding: "2px",
-            border: "solid",
-            borderRadius: "8px",
-            color: "white",
-            background: "grey",
-            margin: "5px",
-          }}
-        >
-          <h2>
-            Name : {voter.first_name} {voter.middle_name} {voter.last_name}
-          </h2>
-          <h4>Date Of Birth : {voter.DOB}</h4>
-          <h4>ID Number : {voter.id_number}</h4>
-          <h4>Polling Station : {voter.polling_station_id}</h4>
-          <div>
-            <Link to="/edit">
-              <button className="regButton" onClick={() => setVoterInfo(voter)} value={voter.id}>
-                Edit Details
-              </button>
-            </Link>
-            <Link to= "/">
-            <button className="regButton" onClick={handleDelete} value={voter.id}>
-              delete
-            </button>
-            </Link>
+          <div
+            key={voter.id}
+            style={{
+              padding: "2px",
+              border: "solid",
+              borderRadius: "8px",
+              color: "white",
+              background: "#556b02",
+              marginTop: "10px",
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+          >
+            <h2>
+              Name : {voter.first_name} {voter.middle_name} {voter.last_name}
+            </h2>
+            <h4>Date Of Birth : {voter.DOB}</h4>
+            <h4>ID Number : {voter.id_number}</h4>
+            <h4>Polling Station : {voter.polling_station_id}</h4>
+            <div>
+              <Link to="/edit">
+                <button
+                  className="regButton"
+                  onClick={() => setVoterInfo(voter)}
+                  value={voter.id}
+                  style={{ marginRight: "20px" }}
+                >
+                  Edit Details
+                </button>
+              </Link>
+              <Link to="/">
+                <button
+                  className="regButton"
+                  onClick={handleDelete}
+                  value={voter.id}
+                >
+                  delete
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
       );
     });
 
