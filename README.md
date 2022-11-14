@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Voter registration platform
+##link to backend repo
+https://github.com/Charity-Nelima/voter-registration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project members
+Evans Ochieng :(Scrum Master)Backend Developer(DB Config, Active Records Migrations)
+George Njogu :Frontend Developer (ReactJS User Interface s)
+Charity Nelima :Frontend Developer (UX/UI Designer)
+Leslie Nyatigi :Frontend Developer (UI & UX Designer & API Endpoints - Sinatra)
 
-In the project directory, you can run:
+### Technologies used
+CSS :For the frontend and responsiveness.
+RUBY + SINATRA :Backend configurations eg http requests, session managements and API endpoints.
+SQLite3 :with active models all setup to query data from the database.
 
-### `npm start`
+### Project members
+Evans Ochieng :(Scrum Master)Backend Developer(DB Config, Active Records Migrations)<br />
+George Njogu :Frontend Developer (ReactJS User Interfaces)<br />
+Charity Nelima :Frontend Developer (UX/UI Designer)<br />
+Leslie Nyatigi :Frontend Developer (UI & UX Designer & API Endpoints - Sinatra)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technologies used
+CSS :For the frontend and responsiveness.<br />
+RUBY + SINATRA :Backend configurations eg http requests, session managements and API endpoints.<br />
+SQLite3 :with active models all setup to query data from the database.<br />
+REACTJs :for event handling eg form validation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Problem Statement
 
-### `npm test`
+Currently, there is no platform for Kenyan voters to comfortably register and submit their voter details .
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Solution
 
-### `npm run build`
+To create an online platform that makes it easy and transparent for voters to submit their details.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+USER AUTHENTICATION :Customers are able to create a profile and be authenticated to the platform.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+EDIT & DELETE :voters are able to edit and delete their details on the platform.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
