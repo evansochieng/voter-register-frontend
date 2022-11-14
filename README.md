@@ -3,7 +3,7 @@
 
 ## Problem Statement
 Kenyan citizens have always been frustrated by the long queues during elections. An extreme effect of this is low voter turnouts on election days.  
-In an attempt to build a voting system, we saw it right to start with a digital registration platform. This project builds a voter registration platform in preparation for general elections.
+In an attempt to build a voting system, we saw it right to start with a digital registration platform. This project builds a voter registration platform that will allow digital registration of voters in preparation for general elections.
 
 ## Project features
 
